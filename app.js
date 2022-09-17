@@ -5,7 +5,8 @@ const playerOneEl = document.querySelector('.player-one');
 const playerTwoEl = document.querySelector('.player-two');
 
 btnEl.addEventListener('click', () => {
-  let playerOne = Math.floor(Math.random() * fighters.length)
-  console.log('clicked');
-  playerOneEl.children[0].setAttribute("src", "img/" + playerOne + ".png")
+  let playerOneSrc = Math.floor(Math.random() * fighters.length) + 1;
+  playerOneEl.children[0].setAttribute("src", "img/" + playerOneSrc + ".png");
+  let playerTwoSrc = Math.floor(Math.random() * fighters.length) + 1;
+  playerTwoEl.children[0].setAttribute("src", "img/" + playerTwoSrc + ".png");
 });
