@@ -9,18 +9,19 @@ const randomBtnEl = document.querySelector('.random-btn');
 
 
 playerOneBtnEl.addEventListener('click', () => {
-  console.log('clicked one');
+  let playerOneSrc = Math.floor(Math.random() * fighters.length) + 1;
+  playerOneEl.children[0].setAttribute("src", "img/" + playerOneSrc + ".png");
 })
 
 playerTwoBtnEl.addEventListener('click', () => {
-  console.log('clicked two');
+  let playerTwoSrc = Math.floor(Math.random() * fighters.length) + 1;
+  playerTwoEl.children[0].setAttribute("src", "img/" + playerTwoSrc + ".png");
 })
 
 
 
 
 randomBtnEl.addEventListener('click', () => {
-  console.log('clicked random');
   let playerOneSrc = Math.floor(Math.random() * fighters.length) + 1;
   playerOneEl.children[0].setAttribute("src", "img/" + playerOneSrc + ".png");
   let playerTwoSrc = Math.floor(Math.random() * fighters.length) + 1;
