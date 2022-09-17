@@ -1,5 +1,5 @@
 // Fighters
-let fighters = ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png', '11.png', '12.png', '13.png', '14.png']
+let fighters = ['akuma', 'balrog', 'bison', 'blanka', 'cammy', 'chun-li', 'dhalsim', 'guile', 'honda', 'ibuki', 'ken', 'ryu', 'sagat', 'vega', 'zangief']
 
 // DOM 
 const playerOneEl = document.querySelector('.player-one');
@@ -10,13 +10,13 @@ const randomBtnEl = document.querySelector('.random-btn');
 
 //Functions for taking src of images
 const firstPlayer = () => {
-  let playerOneSrc = Math.floor(Math.random() * fighters.length) + 1;
-  playerOneEl.children[0].setAttribute("src", "img/" + playerOneSrc + ".png");
+  let playerOne = Math.floor(Math.random() * fighters.length);
+  playerOneEl.children[0].setAttribute("src", "img/" + fighters[playerOne] + ".png");
 }
 
 const secondPlayer = () => {
-  let playerTwoSrc = Math.floor(Math.random() * fighters.length) + 1;
-  playerTwoEl.children[0].setAttribute("src", "img/" + playerTwoSrc + ".png");
+  let playerTwo = Math.floor(Math.random() * fighters.length);
+  playerTwoEl.children[0].setAttribute("src", "img/" + fighters[playerTwo] + ".png");
 }
 
 // Choose buttons
