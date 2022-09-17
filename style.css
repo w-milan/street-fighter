@@ -1,3 +1,8 @@
 .logo {
   height: 150px;
 }
+
+.card-title, .btn {
+  text-transform: uppercase;
+  font-weight: bold;
+}
