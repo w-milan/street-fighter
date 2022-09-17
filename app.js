@@ -7,23 +7,27 @@ const playerOneBtnEl = document.querySelector('button.player-one');
 const playerTwoBtnEl = document.querySelector('button.player-two');
 const randomBtnEl = document.querySelector('.random-btn');
 
-
-playerOneBtnEl.addEventListener('click', () => {
+const firstPlayer = () => {
   let playerOneSrc = Math.floor(Math.random() * fighters.length) + 1;
   playerOneEl.children[0].setAttribute("src", "img/" + playerOneSrc + ".png");
+}
+
+const secondPlayer = () => {
+  let playerTwoSrc = Math.floor(Math.random() * fighters.length) + 1;
+  playerTwoEl.children[0].setAttribute("src", "img/" + playerTwoSrc + ".png");
+}
+
+
+
+playerOneBtnEl.addEventListener('click', () => {
+  firstPlayer();
 })
 
 playerTwoBtnEl.addEventListener('click', () => {
-  let playerTwoSrc = Math.floor(Math.random() * fighters.length) + 1;
-  playerTwoEl.children[0].setAttribute("src", "img/" + playerTwoSrc + ".png");
+  secondPlayer();
 })
 
-
-
-
 randomBtnEl.addEventListener('click', () => {
-  let playerOneSrc = Math.floor(Math.random() * fighters.length) + 1;
-  playerOneEl.children[0].setAttribute("src", "img/" + playerOneSrc + ".png");
-  let playerTwoSrc = Math.floor(Math.random() * fighters.length) + 1;
-  playerTwoEl.children[0].setAttribute("src", "img/" + playerTwoSrc + ".png");
+  firstPlayer();
+  secondPlayer();
 });
