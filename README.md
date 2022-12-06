@@ -1,2 +1,2 @@
 # Preview
-https://tubular-alpaca-cdd891.netlify.app/
+https://w-street-fighter.netlify.app
